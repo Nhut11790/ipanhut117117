@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page Minh Nhut</title>
+  <style>
+    :root{
+      --bg1: #1e3a8a;
+      --bg2: #06b6d4;
+      --card: rgba(255,255,255,0.08);
+      --glass: rgba(255,255,255,0.06);
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(135deg,var(--bg1),var(--bg2));
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border-radius:16px;
+      padding:36px 48px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      text-align:center;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    h1{
+      margin:0 0 8px;
+      font-size: clamp(28px, 6vw, 56px);
+      color: #fff;
+      letter-spacing: 0.6px;
+    }
+
+    p{
+      margin:0;
+      color: rgba(255,255,255,0.85);
+      font-size: 14px;
+      opacity:0.9;
+    }
+
+    /* subtle floating animation */
+    @keyframes floaty {
+      0%{ transform: translateY(0); }
+      50%{ transform: translateY(-8px); }
+      100%{ transform: translateY(0); }
+    }
+    .card{
+      animation: floaty 6s ease-in-out infinite;
+    }
+
+    /* small responsive footer text */
+    .meta{
+      margin-top:14px;
+      font-size:12px;
+      color: rgba(255,255,255,0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="title">
+      <h1 id="title">Page Minh Nhut</h1>
+      <p class="meta">Chúc bạn một ngày tốt lành — đây là trang demo đơn giản.</p>
+    </div>
+  </div>
+</body>
+</html>
